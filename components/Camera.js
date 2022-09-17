@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { Camera } from 'expo-camera';
 import { shareAsync } from 'expo-sharing';
 import * as MediaLibrary from 'expo-media-library';
-// yard add react-pixelify
-import { Pixelify } from "react-pixelify";
+
+
 
 
 const PlantCamera = () => {
@@ -37,16 +37,6 @@ const PlantCamera = () => {
     };
 
     let newPhoto = await cameraRef.current.takePictureAsync(options);
-    // Basic setup
-    <Pixelify
-      src={newPhoto}
-      width={250}
-      height={250}
-      centered={true}
-      pixelSize={8}
-      fillTransparencyColor={white}
-    />
-    
     setPhoto(newPhoto);
     
   };
@@ -63,6 +53,7 @@ const PlantCamera = () => {
         setPhoto(undefined);
       });
     };
+
 
     return (
       <SafeAreaView style={styles.container}>
