@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Navigator from './routes/homeStack.js';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Dylan sucks lol</Text>
+      <Text>app.js</Text>
       <StatusBar style="auto" />
     </View>
   );
