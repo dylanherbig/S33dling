@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import PlantCamera from './components/Camera';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>U suck</Text>
+      <PlantCamera />
+      <Text>Bye Amrit</Text>
       <StatusBar style="auto" />
     </View>
   );
