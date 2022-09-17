@@ -3,8 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
+    <Image source={require('../assets/plant-icon.png')} />,
     <View style={styles.container}>
-      <Text>Dylan sucks lol</Text>
+      <Text>Dylan sucks</Text>
       <StatusBar style="auto" />
     </View>
   );
