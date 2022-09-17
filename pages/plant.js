@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
-export default function App() {
+export default function Plant() {
   return (
-    <Image source={require('../assets/plant-icon.png')} />,
     <View style={styles.container}>
+        <Image
+            source={require('../assets/plant-icon.png')}
+            style={{ width: 150, height: 150 }}
+        />
       <Text>Plant</Text>
       <StatusBar style="auto" />
     </View>
