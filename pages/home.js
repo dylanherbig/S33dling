@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import NavBar from '../components/NavBar';
 
 export default function Home({ navigation }) {
 
@@ -11,6 +12,7 @@ export default function Home({ navigation }) {
     <View style={styles.container}>
       <Text>home page</Text>
       <Button title='plant Bob' onPress={pressHandler} />
+      <NavBar />
       <StatusBar style="auto" />
     </View>
   );
