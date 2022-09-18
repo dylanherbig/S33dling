@@ -1,24 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { globalStyles } from '../style';
 
-export default function Plant() {
+export default function Plant({ navigation }) {
   return (
-    <View style={styles.container}>
-        <Image
-            source={require('../assets/plant-icon.png')}
-            style={{ width: 150, height: 150 }}
+    <View style={globalStyles.container}>
+        <Text>{ navigation.getParam('name')}</Text>
+        <Image style={globalStyles.image}
+            source={require('../assets/plant1.png')}
         />
-      <Text>Plant</Text>
-      <StatusBar style="auto" />
+        <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
