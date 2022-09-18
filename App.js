@@ -2,10 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Navigator from './routes/homeStack';
 
+// import  Pixelify  from "react-pixelify";
+// const src = require("./assets/moneytree.jpg");
+// import { ImagePixelated, ElementPixelated } from "react-pixelate"
+
 
 export default function App() {
   return (
     <Navigator />
+    // <ImagePixelated src={src} width={500} height={300} fillTransparencyColor={"grey"} />
   );
 }
 
