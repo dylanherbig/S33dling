@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import NavBar from '../components/NavBar';
+import PlantCamera from '../components/PlantCamera';
 
 export default function Home({ navigation }) {
 
@@ -11,7 +12,8 @@ export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>home page</Text>
-      <Button title='plant Bob' onPress={pressHandler} />
+      {/* <Button title='plant Bob' onPress={pressHandler} /> */}
+      <PlantCamera />
       <NavBar />
       <StatusBar style="auto" />
     </View>
