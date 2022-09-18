@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Camera } from 'expo-camera';
 import { shareAsync } from 'expo-sharing';
 import * as MediaLibrary from 'expo-media-library';
+import auth from '../firebase.js'
 
 const PlantCamera = () => {
   let cameraRef = useRef();
@@ -50,12 +51,38 @@ const PlantCamera = () => {
       });
     };
 
+    let handleUpload = () => {
+      // const storageRef = ref(storage, `/files/${file.name}`)
+      // const uploadTask = uploadBytesResumable(storageRef, file);
+
+      // uploadTask.on(
+      //     "state_changed",
+      //     (snapshot) => {
+      //         const percent = Math.round(
+      //             (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+      //         );
+
+      //         // update progress
+      //         setPercent(percent);
+      //     },
+      //     (err) => console.log(err),
+      //     () => {
+      //         // download url
+      //         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+      //             console.log(url);
+      //         });
+      //     }
+      // ); 
+    
+    };
+
     return (
       <SafeAreaView style={styles.container}>
         <Image style={styles.preview} source={{ uri: "data:image/jpg;base64," + photo.base64 }} />
         <Button title="Share" onPress={sharePic} />
         {hasMediaLibraryPermission ? <Button title="Save" onPress={savePhoto} /> : undefined}
         <Button title="Discard" onPress={() => setPhoto(undefined)} />
+        <Button title="Add to Profile" onPress={() => handleUpload(undefined)} />
       </SafeAreaView>
     );
   }
