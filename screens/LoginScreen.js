@@ -1,7 +1,8 @@
 import { useNavigation } from '@react-navigation/core'
 import React, { useEffect, useState } from 'react'
-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native'
 import { auth } from '../firebase'
+import Logo from '../assets/logo.png';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('')
@@ -42,10 +43,13 @@ const LoginScreen = () => {
   }
 
   return (
-    <KeyboardAvoidingView
+    <View
       style={styles.container}
       behavior="padding"
     >
+
+      <Text style={styles.title}>S33dling</Text>  
+      <Image source={Logo} />
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Email"
@@ -76,7 +80,7 @@ const LoginScreen = () => {
           <Text style={styles.buttonOutlineText}>Register</Text>
         </TouchableOpacity>
       </View>
-    </KeyboardAvoidingView>
+    </View>
   )
 }
 
@@ -87,6 +91,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    margin: 0,
   },
   inputContainer: {
     width: '80%'
@@ -98,6 +103,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 5,
   },
+  title: {
+    fontSize: 36,
+    color: '#2A7E19',
+  },
   buttonContainer: {
     width: '60%',
     justifyContent: 'center',
@@ -105,7 +114,7 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   button: {
-    backgroundColor: '#0782F9',
+    backgroundColor: '#2A7E19',
     width: '100%',
     padding: 15,
     borderRadius: 10,
@@ -114,7 +123,7 @@ const styles = StyleSheet.create({
   buttonOutline: {
     backgroundColor: 'white',
     marginTop: 5,
-    borderColor: '#0782F9',
+    borderColor: '#2A7E19',
     borderWidth: 2,
   },
   buttonText: {
@@ -123,7 +132,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   buttonOutlineText: {
-    color: '#0782F9',
+    color: '#2A7E19',
     fontWeight: '700',
     fontSize: 16,
   },
