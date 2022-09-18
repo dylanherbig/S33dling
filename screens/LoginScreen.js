@@ -1,7 +1,7 @@
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useEffect } from 'react'
-import { WhiteBalance } from 'expo-camera'
-import { auth } from '../../firebase'
+// import { WhiteBalance } from 'expo-camera'
+import { auth } from '../firebase'
 import { useNaviation } from '@react-navigation/core'
 
 const LoginScreen = () => {
